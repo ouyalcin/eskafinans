@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank and Invoice Information</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 400px; margin: auto; }
+        .language-buttons { position: absolute; top: 20px; right: 20px; display: flex; flex-direction: column; }
+        .language-buttons a { margin: 5px 0; }
+        .menu-list a { display: block; margin: 10px 0; padding: 10px; background: #4CAF50; color: white; text-decoration: none; border-radius: 5px; cursor: pointer; }
+        .footer { margin-top: 20px; }
+        .footer a { margin: 0 10px; }
+        .info-section { display: none; margin-top: 20px; padding: 10px; background: #f1f1f1; border-radius: 5px; text-align: left; }
+        .bank-list a { display: block; margin: 10px 0; padding: 10px; background: #FF5733; color: white; text-decoration: none; border-radius: 5px; cursor: pointer; }
+        .details { display: none; margin-top: 10px; padding: 10px; background: #f1f1f1; border-radius: 5px; text-align: left; }
+        .copy-button { margin-left: 10px; padding: 5px; background: #ddd; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-buttons">
+            <a href="index_tr.html"><img src="turk.png" alt="Türkçe" width="30"></a>
+            <a href="index_en.html"><img src="ing.png" alt="English" width="30"></a>
+            <a href="index_ar.html"><img src="arap.png" alt="العربية" width="30"></a>
+        </div>
+        
+        <img src="firma_logo.png" alt="Company Logo" width="300">
+        
+        <div class="menu-list">
+            <a onclick="toggleOnly('bank')">Banks</a>
+            <a onclick="toggleOnly('invoice')">Invoice Information</a>
+        </div>
+
+        <!-- Bank Information -->
+        <div id="bank" class="info-section">
+            <h2>Banks</h2>
+            <div class="bank-list">
+                <a onclick="toggleDetails('yapikredi-tl')">Yapıkredi TL</a>
+                <div id="yapikredi-tl" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR23 0013 4000 0224 5198 1000 01 <button class="copy-button" onclick="copyText('TR23 0013 4000 0224 5198 1000 01')">Copy</button></p>
+                </div>
+                <a onclick="toggleDetails('denizbank-tl')">Denizbank TL</a>
+                <div id="denizbank-tl" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR81 0006 7010 0000 0099 2826 99 <button class="copy-button" onclick="copyText('TR81 0006 7010 0000 0099 2826 99')">Copy</button></p>
+                </div>
+                <a onclick="toggleDetails('isbankasi-tl')">İş Bankası TL</a>
+                <div id="isbankasi-tl" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR24 0006 4000 0011 5401 3176 04 <button class="copy-button" onclick="copyText('TR24 0006 4000 0011 5401 3176 04')">Copy</button></p>
+                </div>
+                <a onclick="toggleDetails('garanti-tl')">Garanti BBVA TL</a>
+                <div id="garanti-tl" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR32 0006 2000 5230 0006 2928 30 <button class="copy-button" onclick="copyText('TR32 0006 2000 5230 0006 2928 30')">Copy</button></p>
+                </div>
+                <a onclick="toggleDetails('qnb-tl')">QNB Finansbank TL</a>
+                <div id="qnb-tl" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR90 0011 1000 0000 0091 6688 35 <button class="copy-button" onclick="copyText('TR90 0011 1000 0000 0091 6688 35')">Copy</button></p>
+                </div>
+                <a onclick="toggleDetails('yapikredi-eur')">Yapıkredi EUR</a>
+                <div id="yapikredi-eur" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR95 0006 7010 0000 0099 2385 06 <button class="copy-button" onclick="copyText('TR95 0006 7010 0000 0099 2385 06')">Copy</button></p>
+                </div>
+                <a onclick="toggleDetails('yapikredi-usd')">Yapıkredi USD</a>
+                <div id="yapikredi-usd" class="details">
+                    <p><strong>Recipient Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti. <button class="copy-button" onclick="copyText('Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.')">Copy</button></p>
+                    <p><strong>IBAN:</strong> TR72 0006 7010 0000 0099 3190 42 <button class="copy-button" onclick="copyText('TR72 0006 7010 0000 0099 3190 42')">Copy</button></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Invoice Information -->
+        <div id="invoice" class="info-section">
+            <h2>Invoice Information</h2>
+            <p><strong>Company Name:</strong> Eska Plastik Ve Metal Turizm İnşaat Nakliye Tic. Ltd. Şti.</p>
+            <p><strong>Invoice Address:</strong> Veliköy Mahallesi 65. Cadde No:1 Çerkezköy/Tekirdağ/Turkey</p>
+            <p><strong>Postal Code:</strong> 59500</p>
+            <p><strong>Tax Office and No:</strong> Çerkezköy Tax Office / 380 095 3540</p>
+            <p><strong>Mersis No:</strong> 0380 095 354 000 001</p>
+            <p><strong>Contact:</strong> +90 282 726 26 00</p>
+            <p><strong>Web / Email:</strong> www.eskaplastik.com.tr / cerkezkoy@eskaplastik.com.tr</p>
+            <p><strong>Sales / Reconciliation:</strong> pazarlama@eskaplastik.com.tr / muhasebe@eskaplastik.com.tr</p>
+        </div>
+
+        <div class="footer">
+            <a href="https://api.whatsapp.com/send/?phone=905527365959&text=Hello%2C+I+would+like+to+reach+the+accounting+department.&type=phone_number&app_absent=0">Accounting</a>
+            <a href="https://api.whatsapp.com/send/?phone=905524802600&text=Hello%2C+I+would+like+to+reach+the+sales+department.&type=phone_number&app_absent=0">Sales and Marketing</a>
+            <a href="https://www.eskaplastik.com.tr">Website</a>
+        </div>
+        <div class="ekatalog">
+            <a href="e-katalog.pdf" target="_blank" style="display: block; margin-top: 20px; padding: 10px; background: #FF5733; color: white; text-decoration: none; border-radius: 5px;">E-Catalog</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleOnly(sectionId) {
+            const sections = document.querySelectorAll('.info-section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleDetails(detailsId) {
+            var details = document.getElementById(detailsId);
+            details.style.display = (details.style.display === 'none' || details.style.display === '') ? 'block' : 'none';
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Copied: ' + text);
+            }, function(err) {
+                console.error('Copy failed: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
